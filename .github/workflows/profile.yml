@@ -19,8 +19,8 @@ jobs:
   stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: pip install fonttools brotli pillow
@@ -43,7 +43,7 @@ jobs:
           outputs: |
             dist/snake-dark.svg?palette=github-dark&color_snake=#E8291C&color_dots=#161b22,#5a0a07,#a80d14,#e8291c,#f4b400
             dist/snake-light.svg?color_snake=#E8291C&color_dots=#ebedf0,#ffd2c2,#f8a28f,#e8291c,#a80d14
-      - uses: crazy-max/ghaction-github-pages@v4
+      - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
