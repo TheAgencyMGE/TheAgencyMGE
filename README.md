@@ -1,16 +1,72 @@
 <!-- RYAN PANDA // CODENAME: AGENCY -->
 
 <p align="center">
-  <img src="assets/intro.svg" width="100%" alt="RYAN PANDA. They call me Agency.">
+  <a href="https://theagencymge.xyz"><img src="assets/header.svg" width="100%" alt="Ryan Panda, codename Agency. Full-stack, mobile and AI developer. theagencymge.xyz"></a>
 </p>
 
 <p align="center">
-  <img src="assets/menu.svg" width="100%" alt="Main menu: Ryan Panda, codename Agency">
+  <a href="https://theagencymge.xyz"><img src="https://img.shields.io/badge/WEBSITE-theagencymge.xyz-E8291C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=070707" alt="WEBSITE: theagencymge.xyz"></a>
+  <img src="https://komarev.com/ghpvc/?username=TheAgencyMGE&label=PROFILE%20VIEWS&color=E8291C&style=for-the-badge" alt="Profile views">
+</p>
+
+<img src="assets/sec-about.svg" width="100%" alt="About me">
+
+```ts
+const agency = {
+  name:      "Ryan Panda",
+  codename:  "AGENCY",
+  base:      "Seattle, WA",
+  school:    "UW Informatics '30",
+  building:  ["full-stack web", "mobile apps", "AI / ML tools", "desktop UX"],
+  currently: [
+    "Instructor @ iCode Redmond",
+    "AI & Coding Instructor @ Coding Mind Academy",
+  ],
+  previously: [
+    "SDE Intern @ Remit2Any",
+    "Co-President & Board @ Luma Coding",
+  ],
+  speaks:    ["English", "Bengali", "Spanish"],
+  offline:   ["Destiny 2", "Attack on Titan", "Pacific Rim"],
+  motto:     "I watch anime and game. Oh, I code too.",
+};
+```
+
+<img src="assets/sec-open.svg" width="100%" alt="Open to">
+
+<p align="center">
+  <img src="assets/open-to.svg" width="100%" alt="Open to internships (software engineering, full-stack, mobile, AI/ML) and contract work (web and mobile apps, AI integrations, UI/UX)">
+</p>
+
+> **Hiring for an internship or have a contract project?** Email **[ryanpanda78@gmail.com](mailto:ryanpanda78@gmail.com)**, message me on [LinkedIn](https://linkedin.com/in/ryan-panda-5b021a352), or see more at **[theagencymge.xyz](https://theagencymge.xyz)**.
+
+<img src="assets/sec-stack.svg" width="100%" alt="Tech stack">
+
+<p align="center"><b>LANGUAGES</b><br><br>
+  <img src="https://skillicons.dev/icons?i=py,ts,js,rust,cs,java,dart,html,css&perline=9" alt="Python, TypeScript, JavaScript, Rust, C#, Java, Dart, HTML, CSS">
+</p>
+<p align="center"><b>FRAMEWORKS & PLATFORMS</b><br><br>
+  <img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,flutter,angular,tauri,electron,tailwind,firebase,sqlite&perline=10" alt="React, Next.js, Node.js, Flutter, Angular, Tauri, Electron, Tailwind, Firebase, SQLite">
+</p>
+<p align="center"><b>AI, DESIGN & TOOLING</b><br><br>
+  <img src="https://skillicons.dev/icons?i=tensorflow,sklearn,figma,ps,ai,git,githubactions,vercel&perline=8" alt="TensorFlow, scikit-learn, Figma, Photoshop, Illustrator, Git, GitHub Actions, Vercel">
+</p>
+<p align="center"><sub>also: React Native · WPF · pandas · Hugging Face · LLM APIs · SQL</sub></p>
+
+<img src="assets/sec-stats.svg" width="100%" alt="Stats">
+
+<p align="center">
+  <img src="assets/stats.svg" width="100%" alt="Live GitHub stats">
 </p>
 
 <p align="center">
-  <img src="assets/title-work.svg" width="100%" alt="WORK">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TheAgencyMGE/TheAgencyMGE/output/snake-dark.svg">
+    <img src="https://raw.githubusercontent.com/TheAgencyMGE/TheAgencyMGE/output/snake-light.svg" width="100%" alt="Contribution graph being eaten by a snake">
+  </picture>
 </p>
+
+<img src="assets/sec-work.svg" width="100%" alt="Featured work">
 
 <p align="center">
   <a href="https://github.com/TheAgencyMGE/aero-dock"><img src="assets/work-1.svg" width="32%" alt="AERO DOCK: 74★ · XDA"></a>
@@ -21,34 +77,19 @@
   <a href="https://github.com/TheAgencyMGE/nextup-pnw"><img src="assets/work-6.svg" width="32%" alt="NEXTUP PNW: SEATTLE OPPS"></a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/TheAgencyMGE?tab=repositories"><img src="assets/chip-1.svg" height="64" alt="30 repos"></a>
-  <a href="https://devpost.com/TheAgencyMGE"><img src="assets/chip-2.svg" height="64" alt="24 Devpost projects"></a>
-  <a href="https://devpost.com/TheAgencyMGE"><img src="assets/chip-3.svg" height="64" alt="51 hackathons"></a>
-  <img src="assets/chip-4.svg" height="64" alt="$2,000+ won">
-</p>
+<img src="assets/sec-trophies.svg" width="100%" alt="Trophies">
 
 <p align="center">
-  <img src="assets/experience.svg" width="100%" alt="Experience: SDE Intern at Remit2Any, Co-President at Luma Coding, AI and Coding Instructor at Coding Mind Academy, Instructor at iCode Redmond. Trophies: 1st HackaByte CA, 2nd RecessHacks 5.0, Top 10 of 900+ FusionHacks 2, Best in Track StellarNet, 3rd WA State TSA, XDA feature for Aero Dock.">
+  <img src="assets/trophies.svg" width="100%" alt="51 hackathons, 24 Devpost builds, 6 wins, $2,000+ won">
 </p>
 
-<p align="center">
-  <img src="assets/skills.svg" width="100%" alt="Skills: Python, TypeScript, JavaScript, Rust, C#, Java, Dart, SQL, React, React Native, Tauri, Electron, Flutter, Angular, Node.js, WPF, Firebase, SQLite, scikit-learn, pandas, TensorFlow, Hugging Face, LLM APIs, Figma, Photoshop, Illustrator, Git, GitHub Actions">
-</p>
+<img src="assets/sec-connect.svg" width="100%" alt="Connect">
 
 <p align="center">
-  <img src="assets/profile.svg" width="100%" alt="Profile: Ryan Panda, UW Informatics '30, Seattle WA. Fav game Destiny 2, fav show Attack on Titan, fav movie Pacific Rim.">
-</p>
-
-<p align="center">
-  <img src="assets/contact.svg" width="100%" alt="Calling card: Let's build something">
-</p>
-
-<p align="center">
-  <a href="https://github.com/TheAgencyMGE"><img src="assets/link-github.svg" width="48%" alt="GitHub: TheAgencyMGE"></a>
-  <a href="https://linkedin.com/in/ryan-panda-5b021a352"><img src="assets/link-linkedin.svg" width="48%" alt="LinkedIn: ryan-panda"></a>
-  <a href="https://devpost.com/TheAgencyMGE"><img src="assets/link-devpost.svg" width="48%" alt="Devpost: 51 hackathons"></a>
-  <a href="mailto:ryanpanda78@gmail.com"><img src="assets/link-email.svg" width="48%" alt="Email: ryanpanda78@gmail.com"></a>
+  <a href="https://theagencymge.xyz"><img src="https://img.shields.io/badge/WEBSITE-theagencymge.xyz-E8291C?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=070707" alt="WEBSITE: theagencymge.xyz"></a>
+  <a href="https://linkedin.com/in/ryan-panda-5b021a352"><img src="https://img.shields.io/badge/LINKEDIN-ryan--panda-F4B400?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=070707" alt="LINKEDIN: ryan-panda"></a>
+  <a href="https://devpost.com/TheAgencyMGE"><img src="https://img.shields.io/badge/DEVPOST-51%20hackathons-E8291C?style=for-the-badge&logo=devpost&logoColor=white&labelColor=070707" alt="DEVPOST: 51 hackathons"></a>
+  <a href="mailto:ryanpanda78@gmail.com"><img src="https://img.shields.io/badge/EMAIL-ryanpanda78%40gmail.com-F4B400?style=for-the-badge&logo=gmail&logoColor=white&labelColor=070707" alt="EMAIL: ryanpanda78@gmail.com"></a>
 </p>
 
 <p align="center">
