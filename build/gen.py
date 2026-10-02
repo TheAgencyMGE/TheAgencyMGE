@@ -108,7 +108,7 @@ ABOUT = [
     [('p', '  ],')],
     [('p', '  '), ('key', 'speaks'), ('p', ':     ['), ('s', '"English"'), ('p', ', '), ('s', '"Bengali"'), ('p', ', '), ('s', '"Spanish"'), ('p', '],')],
     [('p', '  '), ('key', 'offline'), ('p', ':    ['), ('s', '"Destiny 2"'), ('p', ', '), ('s', '"Attack on Titan"'), ('p', ', '), ('s', '"Pacific Rim"'), ('p', '],')],
-    [('p', '  '), ('key', 'motto'), ('p', ':      '), ('s', '"I watch anime and game. Oh, I code too."'), ('p', ',')],
+    [('p', '  '), ('key', 'motto'), ('p', ':      '), ('s', '"Set the bar so low that mediocrity looks impressive."'), ('p', ',')],
     [('p', '};')],
 ]
 
@@ -145,7 +145,7 @@ def about():
     ck = d.timeline(L, fr, 'cur')
     d.add(f'<g style="animation:{ck} {L}s steps(1,end) infinite"><rect x="82" y="{TOP - 16}" width="10" height="20" fill="{GOLD}" style="animation:blink .8s linear infinite"/></g>')
     d.add(crt(d, W, H))
-    d.save('about.svg')
+    d.save('agency-config.svg')
 
 
 # =====================================================================
@@ -312,7 +312,7 @@ README = """<!-- RYAN PANDA // CODENAME: AGENCY -->
 <img src="assets/sec-about.svg" width="100%" alt="About me">
 
 <p align="center">
-  <img src="assets/about.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond and AI and Coding Instructor at Coding Mind Academy. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
+  <img src="assets/agency-config.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond and AI and Coding Instructor at Coding Mind Academy. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
 </p>
 
 <img src="assets/sec-open.svg" width="100%" alt="Open to">
