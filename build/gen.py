@@ -98,10 +98,7 @@ ABOUT = [
     [('p', '  '), ('key', 'school'), ('p', ':     '), ('s', '"UW Informatics \'30"'), ('p', ',')],
     [('p', '  '), ('key', 'building'), ('p', ':   ['), ('s', '"full-stack web"'), ('p', ', '), ('s', '"mobile apps"'), ('p', ',')],
     [('p', '               '), ('s', '"AI / ML tools"'), ('p', ', '), ('s', '"desktop UX"'), ('p', '],')],
-    [('p', '  '), ('key', 'currently'), ('p', ':  [')],
-    [('p', '    '), ('s', '"Instructor @ iCode Redmond"'), ('p', ',')],
-    [('p', '    '), ('s', '"AI & Coding Instructor @ Coding Mind Academy"'), ('p', ',')],
-    [('p', '  ],')],
+    [('p', '  '), ('key', 'currently'), ('p', ':  '), ('s', '"Instructor @ iCode Redmond"'), ('p', ',')],
     [('p', '  '), ('key', 'previously'), ('p', ': [')],
     [('p', '    '), ('s', '"SDE Intern @ Remit2Any"'), ('p', ',')],
     [('p', '    '), ('s', '"Co-President & Board @ Luma Coding"'), ('p', ',')],
@@ -145,7 +142,7 @@ def about():
     ck = d.timeline(L, fr, 'cur')
     d.add(f'<g style="animation:{ck} {L}s steps(1,end) infinite"><rect x="82" y="{TOP - 16}" width="10" height="20" fill="{GOLD}" style="animation:blink .8s linear infinite"/></g>')
     d.add(crt(d, W, H))
-    d.save('agency-config.svg')
+    d.save('agency-config-v2.svg')
 
 
 # =====================================================================
@@ -312,7 +309,7 @@ README = """<!-- RYAN PANDA // CODENAME: AGENCY -->
 <img src="assets/sec-about.svg" width="100%" alt="About me">
 
 <p align="center">
-  <img src="assets/agency-config.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond and AI and Coding Instructor at Coding Mind Academy. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
+  <img src="assets/agency-config-v2.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
 </p>
 
 <img src="assets/sec-open.svg" width="100%" alt="Open to">
