@@ -75,5 +75,10 @@
 </p>
 
 <p align="center">
+  <b>Want to support my dev journey?</b><br><br>
+  <a href="https://ko-fi.com/theagencymge"><img src="https://img.shields.io/badge/KO--FI-buy%20me%20a%20coffee-E8291C?style=for-the-badge&logo=kofi&logoColor=white&labelColor=070707" alt="KO-FI: buy me a coffee"></a>
+</p>
+
+<p align="center">
   <img src="assets/footer.svg" width="100%" alt="Thanks for playing">
 </p>

@@ -368,6 +368,11 @@ README = """<!-- RYAN PANDA // CODENAME: AGENCY -->
 </p>
 
 <p align="center">
+  <b>Want to support my dev journey?</b><br><br>
+  {b_kofi}
+</p>
+
+<p align="center">
   <img src="assets/footer.svg" width="100%" alt="Thanks for playing">
 </p>
 """
@@ -380,7 +385,8 @@ def readme():
            .replace('{b_site}', badge('WEBSITE', 'theagencymge.xyz', 'E8291C', 'googlechrome', SITE))
            .replace('{b_li}', badge('LINKEDIN', 'ryan-panda', 'F4B400', 'linkedin', 'https://linkedin.com/in/ryan-panda-5b021a352'))
            .replace('{b_dev}', badge('DEVPOST', 'TheAgencyMGE', 'E8291C', 'devpost', 'https://devpost.com/TheAgencyMGE'))
-           .replace('{b_mail}', badge('EMAIL', 'ryanpanda78@gmail.com', 'F4B400', 'gmail', 'mailto:ryanpanda78@gmail.com')))
+           .replace('{b_mail}', badge('EMAIL', 'ryanpanda78@gmail.com', 'F4B400', 'gmail', 'mailto:ryanpanda78@gmail.com'))
+           .replace('{b_kofi}', badge('KO-FI', 'buy me a coffee', 'E8291C', 'kofi', 'https://ko-fi.com/theagencymge')))
     with open(os.path.join(HERE, '..', 'README.md'), 'w', encoding='utf-8') as fh:
         fh.write(out)
 
