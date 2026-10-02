@@ -11,7 +11,7 @@
 <img src="assets/sec-about.svg" width="100%" alt="About me">
 
 <p align="center">
-  <img src="assets/agency-config-v2.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
+  <img src="assets/agency-config-v3.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Business Development Intern at Arogya and Instructor at iCode Redmond. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
 </p>
 
 <img src="assets/sec-open.svg" width="100%" alt="Open to">
