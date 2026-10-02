@@ -268,7 +268,7 @@ def trophies():
               + f'<g transform="translate(30,{th / 2})"><g style="animation:beat 1s ease-out {i * .17:.2f}s infinite" class="c">{star(0, 0, 30, INK)}</g></g>'
               + d.text(56, th / 2 + fs * .38, t, 'Anton', fs, INK) + '</g></g>')
     d.add(crt(d, W, H))
-    d.save('trophies.svg')
+    d.save('hackathon-record.svg')
 
 
 # =====================================================================
@@ -358,7 +358,7 @@ README = """<!-- RYAN PANDA // CODENAME: AGENCY -->
 <img src="assets/sec-trophies.svg" width="100%" alt="Trophies">
 
 <p align="center">
-  <img src="assets/trophies.svg" width="100%" alt="6x hackathon winner, $3K+ in prizes">
+  <img src="assets/hackathon-record.svg" width="100%" alt="6x hackathon winner, $3K+ in prizes">
 </p>
 
 <img src="assets/sec-connect.svg" width="100%" alt="Connect">
