@@ -88,6 +88,67 @@ def header():
 
 
 # =====================================================================
+# ABOUT: animated terminal showing agency.config.ts
+# =====================================================================
+ABOUT = [
+    [('k', 'const '), ('v', 'agency'), ('p', ' = {')],
+    [('p', '  '), ('key', 'name'), ('p', ':       '), ('s', '"Ryan Panda"'), ('p', ',')],
+    [('p', '  '), ('key', 'codename'), ('p', ':   '), ('s', '"AGENCY"'), ('p', ',')],
+    [('p', '  '), ('key', 'base'), ('p', ':       '), ('s', '"Seattle, WA"'), ('p', ',')],
+    [('p', '  '), ('key', 'school'), ('p', ':     '), ('s', '"UW Informatics \'30"'), ('p', ',')],
+    [('p', '  '), ('key', 'building'), ('p', ':   ['), ('s', '"full-stack web"'), ('p', ', '), ('s', '"mobile apps"'), ('p', ',')],
+    [('p', '               '), ('s', '"AI / ML tools"'), ('p', ', '), ('s', '"desktop UX"'), ('p', '],')],
+    [('p', '  '), ('key', 'currently'), ('p', ':  [')],
+    [('p', '    '), ('s', '"Instructor @ iCode Redmond"'), ('p', ',')],
+    [('p', '    '), ('s', '"AI & Coding Instructor @ Coding Mind Academy"'), ('p', ',')],
+    [('p', '  ],')],
+    [('p', '  '), ('key', 'previously'), ('p', ': [')],
+    [('p', '    '), ('s', '"SDE Intern @ Remit2Any"'), ('p', ',')],
+    [('p', '    '), ('s', '"Co-President & Board @ Luma Coding"'), ('p', ',')],
+    [('p', '  ],')],
+    [('p', '  '), ('key', 'speaks'), ('p', ':     ['), ('s', '"English"'), ('p', ', '), ('s', '"Bengali"'), ('p', ', '), ('s', '"Spanish"'), ('p', '],')],
+    [('p', '  '), ('key', 'offline'), ('p', ':    ['), ('s', '"Destiny 2"'), ('p', ', '), ('s', '"Attack on Titan"'), ('p', ', '), ('s', '"Pacific Rim"'), ('p', '],')],
+    [('p', '  '), ('key', 'motto'), ('p', ':      '), ('s', '"I watch anime and game. Oh, I code too."'), ('p', ',')],
+    [('p', '};')],
+]
+
+
+def about():
+    LH, FS, TOP = 27, 17, 98
+    H = TOP + len(ABOUT) * LH + 30
+    d = Doc(W, H, 'agency.config.ts')
+    d.add(panel_bg(d, W, H))
+    cols = {'k': RED, 'v': '#fff', 'p': '#d8d2c4', 'key': '#ff6a5c', 's': GOLD}
+    d.add(f'<rect x="40" y="34" width="{W - 70}" height="{H - 54}" fill="{RED}"/>')
+    d.add(f'<rect x="30" y="24" width="{W - 70}" height="{H - 54}" fill="{INK}" stroke="#fff" stroke-width="4"/>')
+    d.add(f'<rect x="32" y="26" width="{W - 74}" height="38" fill="{RED}"/><rect x="32" y="64" width="{W - 74}" height="4" fill="#fff"/>')
+    for i, c in enumerate((GOLD, '#fff', INK)):
+        d.add(f'<circle cx="{58 + i * 26}" cy="45" r="8" fill="{c}" stroke="{INK}" stroke-width="2"/>')
+    d.add(d.text(W / 2, 53, 'AGENCY.CONFIG.TS', 'Anton', 20, '#fff', 'middle', .2))
+    # lines appear one by one, hold, then the loop restarts
+    step, L = .16, 14.0
+    cw = measure('a', 'Mono', FS)
+    for i, line in enumerate(ABOUT):
+        t0 = .3 + i * step
+        k = d.timeline(L, [(0, 'opacity:0;transform:translateX(-14px)'), (t0, 'opacity:0;transform:translateX(-14px)', 'cubic-bezier(.2,1.6,.4,1)'),
+                           (t0 + .2, 'opacity:1;transform:none'), (L - .5, 'opacity:1;transform:none'), (L - .2, 'opacity:0;transform:none'), (L, 'opacity:0')], 'ln')
+        y = TOP + i * LH
+        spans = ''.join(f'<tspan fill="{cols[c]}">{d.use("Mono", t)}</tspan>' for c, t in line)
+        d.add(d.text(66, y, f'{i + 1:>2}', 'Mono', 12, '#6a6a6a', 'end', 0, f'style="opacity:0;animation:{k} {L}s linear infinite"'))
+        d.add(f'<text x="82" y="{y}" font-family="Mono" font-size="{FS}" xml:space="preserve" style="opacity:0;animation:{k} {L}s linear infinite">{spans}</text>')
+    # cursor rides down with each new line, then blinks at the end
+    fr = [(0, 'transform:translate(0px,0px)')]
+    for i, line in enumerate(ABOUT):
+        n = sum(len(t) for _, t in line)
+        fr.append((.3 + i * step + .2, f'transform:translate({n * cw + 4:.0f}px,{i * LH}px)'))
+    fr.append((L, fr[-1][1]))
+    ck = d.timeline(L, fr, 'cur')
+    d.add(f'<g style="animation:{ck} {L}s steps(1,end) infinite"><rect x="82" y="{TOP - 16}" width="10" height="20" fill="{GOLD}" style="animation:blink .8s linear infinite"/></g>')
+    d.add(crt(d, W, H))
+    d.save('about.svg')
+
+
+# =====================================================================
 # Section banners (thin, animated)
 # =====================================================================
 def section(word, sub, fname):
@@ -185,17 +246,17 @@ def work_card(i, title, stat, img, pos):
 def trophies():
     items = ['1ST · HACKABYTE CA', '2ND · RECESSHACKS 5.0', 'TOP 10 / 900+ · FUSIONHACKS 2',
              'BEST IN TRACK · STELLARNET', '3RD · WA STATE TSA', 'XDA FEATURE · AERO DOCK']
-    record = [('51', 'HACKATHONS'), ('24', 'DEVPOST BUILDS'), ('6', 'WINS'), ('$2K+', 'WON')]
+    record = [('6X', 'HACKATHON WINNER'), ('$3K+', 'IN PRIZES')]
     H = 300
-    d = Doc(W, H, 'Trophies: 51 hackathons, 24 Devpost builds, 6 wins, $2,000+ won. ' + ', '.join(items))
+    d = Doc(W, H, 'Trophies: 6x hackathon winner, $3K+ in prizes. ' + ', '.join(items))
     d.add(panel_bg(d, W, H))
     d.css.append('@keyframes slide{from{transform:translateX(-1100px)}}')
     d.css.append('@keyframes popn{0%{transform:scale(0) rotate(-20deg)}100%{transform:none}}')
     for i, (num, lab) in enumerate(record):
-        x = 40 + i * 232
-        body = (skewbox(0, 0, 210, 84, -10, '#fff' if i % 2 == 0 else INK, INK if i % 2 == 0 else GOLD, 3, RED if i % 2 == 0 else GOLD, 7, 7)
-                + d.text(105, 50, num, 'Bowlby', 34, RED if i % 2 == 0 else GOLD, 'middle')
-                + d.text(105, 74, lab, 'Anton', 15, INK if i % 2 == 0 else '#fff', 'middle', .16))
+        x = 40 + i * 470
+        body = (skewbox(0, 0, 430, 84, -10, '#fff' if i % 2 == 0 else INK, INK if i % 2 == 0 else GOLD, 3, RED if i % 2 == 0 else GOLD, 7, 7)
+                + d.text(30, 58, num, 'Bowlby', 38, RED if i % 2 == 0 else GOLD, 'start')
+                + d.text(400, 54, lab, 'Anton', 28, INK if i % 2 == 0 else '#fff', 'end', .1))
         d.add(f'<g transform="translate({x},28)"><g class="c" style="animation:popn .45s cubic-bezier(.2,1.8,.4,1) {.1 + i * .08:.2f}s both">{body}</g></g>')
     tw, th = 290, 54
     for i, t in enumerate(items):
@@ -246,31 +307,13 @@ README = """<!-- RYAN PANDA // CODENAME: AGENCY -->
 
 <p align="center">
   {b_site}
-  <img src="https://komarev.com/ghpvc/?username=TheAgencyMGE&label=PROFILE%20VIEWS&color=E8291C&style=for-the-badge" alt="Profile views">
 </p>
 
 <img src="assets/sec-about.svg" width="100%" alt="About me">
 
-```ts
-const agency = {
-  name:      "Ryan Panda",
-  codename:  "AGENCY",
-  base:      "Seattle, WA",
-  school:    "UW Informatics '30",
-  building:  ["full-stack web", "mobile apps", "AI / ML tools", "desktop UX"],
-  currently: [
-    "Instructor @ iCode Redmond",
-    "AI & Coding Instructor @ Coding Mind Academy",
-  ],
-  previously: [
-    "SDE Intern @ Remit2Any",
-    "Co-President & Board @ Luma Coding",
-  ],
-  speaks:    ["English", "Bengali", "Spanish"],
-  offline:   ["Destiny 2", "Attack on Titan", "Pacific Rim"],
-  motto:     "I watch anime and game. Oh, I code too.",
-};
-```
+<p align="center">
+  <img src="assets/about.svg" width="100%" alt="agency.config.ts: Ryan Panda, codename AGENCY, Seattle WA, UW Informatics 30. Building full-stack web, mobile apps, AI/ML tools, desktop UX. Currently Instructor at iCode Redmond and AI and Coding Instructor at Coding Mind Academy. Previously SDE Intern at Remit2Any and Co-President and Board at Luma Coding. Speaks English, Bengali, Spanish.">
+</p>
 
 <img src="assets/sec-open.svg" width="100%" alt="Open to">
 
@@ -315,7 +358,7 @@ const agency = {
 <img src="assets/sec-trophies.svg" width="100%" alt="Trophies">
 
 <p align="center">
-  <img src="assets/trophies.svg" width="100%" alt="51 hackathons, 24 Devpost builds, 6 wins, $2,000+ won">
+  <img src="assets/trophies.svg" width="100%" alt="6x hackathon winner, $3K+ in prizes">
 </p>
 
 <img src="assets/sec-connect.svg" width="100%" alt="Connect">
@@ -339,7 +382,7 @@ def readme():
     out = (README.replace('{cards}', cards).replace('{site}', SITE)
            .replace('{b_site}', badge('WEBSITE', 'theagencymge.xyz', 'E8291C', 'googlechrome', SITE))
            .replace('{b_li}', badge('LINKEDIN', 'ryan-panda', 'F4B400', 'linkedin', 'https://linkedin.com/in/ryan-panda-5b021a352'))
-           .replace('{b_dev}', badge('DEVPOST', '51 hackathons', 'E8291C', 'devpost', 'https://devpost.com/TheAgencyMGE'))
+           .replace('{b_dev}', badge('DEVPOST', 'TheAgencyMGE', 'E8291C', 'devpost', 'https://devpost.com/TheAgencyMGE'))
            .replace('{b_mail}', badge('EMAIL', 'ryanpanda78@gmail.com', 'F4B400', 'gmail', 'mailto:ryanpanda78@gmail.com')))
     with open(os.path.join(HERE, '..', 'README.md'), 'w', encoding='utf-8') as fh:
         fh.write(out)
@@ -349,7 +392,7 @@ if __name__ == '__main__':
     import sys
     only = sys.argv[1:]
     jobs = {
-        'header': header,
+        'header': header, 'about': about,
         'sections': lambda: [section(w, s, f) for w, s, f in [
             ('ABOUT ME', 'PLAYER PROFILE', 'sec-about.svg'), ('OPEN TO', 'NOW ACCEPTING QUESTS', 'sec-open.svg'),
             ('TECH STACK', 'INVENTORY', 'sec-stack.svg'), ('STATS', 'LIVE FROM GITHUB', 'sec-stats.svg'),

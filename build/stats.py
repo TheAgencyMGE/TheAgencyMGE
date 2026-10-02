@@ -39,7 +39,7 @@ def fetch():
 
 def render(s):
     W, H = 1000, 380
-    d = Doc(W, H, f"Ryan Panda's GitHub stats: {s['stars']} stars, {s['contribs']} contributions in the last year, {s['repos']} public repos")
+    d = Doc(W, H, f"Ryan Panda's GitHub stats: {s['stars']} stars, {s['contribs']} contributions in the last year")
     d.add(panel_bg(d, W, H))
     d.css.append('@keyframes slide{from{transform:translateX(-1100px)}}')
     d.css.append('@keyframes fillx{from{transform:scaleX(0)}}')
@@ -48,7 +48,7 @@ def render(s):
     # ---- left: player stats
     d.add(f'<g transform="translate(40,34)">' + skewbox(0, 0, 230, 36, -12, RED) + d.text(115, 27, 'PLAYER STATS', 'Anton', 22, '#fff', 'middle', .16) + '</g>')
     rows = [('STARS EARNED', s['stars']), ('CONTRIBUTIONS · 1Y', s['contribs']), ('COMMITS · 1Y', s['commits']),
-            ('PULL REQUESTS · 1Y', s['prs']), ('PUBLIC REPOS', s['repos']), ('FOLLOWERS', s['followers'])]
+            ('PULL REQUESTS · 1Y', s['prs']), ('FOLLOWERS', s['followers'])]
     for i, (lab, val) in enumerate(rows):
         y = 92 + i * 46
         sh = RED if i % 2 == 0 else GOLD
